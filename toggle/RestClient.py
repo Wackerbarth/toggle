@@ -12,7 +12,7 @@ class RestClient:
     self._host = config.get("Server", "host")
     self._port = config.get("Server", "port")
     self._prefix = "/api"
-    self._api_key = config.get("OctoPrint", "authentication")
+    self._api_key = config.get("OctoPrint", "rest_api_key")
     self._headers = {'Content-Type': 'application/json', 'X-Api-Key': self._api_key}
 
   def start_job(self):
